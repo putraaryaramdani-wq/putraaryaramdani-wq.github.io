@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Bukti Bayar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Bioskop Online XIX 🎬</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="registrasi.html">Registrasi Tiket</a>
+        <a href="upload.html">Upload Bukti Bayar</a>
+    </nav>
+</header>
+
+<main class="page-content">
+    <section class="upload-section">
+        <h2>Upload Bukti Pembayaran</h2>
+
+        <form id="uploadForm">
+            <div class="form-row">
+                <label for="buktiFile">Pilih File Bukti Pembayaran:</label>
+                <input type="file" id="buktiFile" accept=".jpg,.jpeg,.png,.pdf" required>
+            </div>
+
+            <div class="button-row">
+                <button type="button" onclick="uploadBukti()" class="primary-button">Upload</button>
+                <button type="button" onclick="window.location.href='index.html'" class="secondary-button">Kembali</button>
+            </div>
+        </form>
+
+        <div id="notification" class="notification" style="display: none;"></div>
+    </section>
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>

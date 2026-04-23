@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Registrasi Tiket</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Bioskop Online XIX 🎬</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="registrasi.html">Registrasi Tiket</a>
+        <a href="upload.html">Upload Bukti Bayar</a>
+    </nav>
+</header>
+
+<main class="page-content">
+    <section class="registration-section">
+        <h2>Registrasi Tiket</h2>
+
+        <form id="formTiket">
+            <div class="form-row">
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" required>
+            </div>
+
+            <div class="form-row">
+                <label for="hp">Nomor Handphone:</label>
+                <input type="text" id="hp" placeholder="0895xxxxxxxx" required>
+            </div>
+
+            <div class="form-row">
+                <label for="tiket">Jumlah Tiket yang Dipesan:</label>
+                <input type="number" id="tiket" min="1" max="9" required>
+            </div>
+
+            <div class="form-row">
+                <label for="tanggal">Tanggal Nonton:</label>
+                <input type="date" id="tanggal" required>
+            </div>
+
+            <div class="form-row">
+                <label>Jenis Kelamin:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="kelamin" value="Laki-laki" checked> Laki-laki</label>
+                    <label><input type="radio" name="kelamin" value="Perempuan"> Perempuan</label>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <label>Pesan Makanan apa saja?</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" id="popcorn"> Pop Corn</label>
+                    <label><input type="checkbox" id="bread"> XIX Bread</label>
+                    <label><input type="checkbox" id="drink"> XIX Softdrink</label>
+                    <label><input type="checkbox" id="coldtea"> XIX Cold Tea</label>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <label for="film">Film yang Ingin Ditonton:</label>
+                <select id="film" required>
+                    <option value="Fetih1453">Fetih 1453</option>
+                    <option value="SangKyai">Sang Kyai</option>
+                    <option value="SingaPadangPasir">Singa Padang Pasir</option>
+                    <option value="Tjokroaminoto">Tjokroaminoto</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <label for="jadwal">Jadwal tonton:</label>
+                <select id="jadwal" required>
+                    <option value="Pagi">Pagi</option>
+                    <option value="Siang">Siang</option>
+                    <option value="Malam">Malam</option>
+                </select>
+            </div>
+
+            <div class="form-row textarea-row">
+                <label for="kritik">Kritik dan Saran:</label>
+                <textarea id="kritik" rows="5" placeholder="Tulis kritik atau saran Anda..."></textarea>
+            </div>
+
+            <div class="button-row">
+                <button type="button" onclick="window.location.href='index.html'" class="secondary-button">Kembali</button>
+                <button type="button" onclick="hitung()" class="secondary-button">Hitung</button>
+                <button type="submit" class="primary-button">Kirim</button>
+            </div>
+        </form>
+
+        <div class="total-display">
+            Uang yang harus anda bayarkan: <strong>Rp <span id="total">0</span></strong>
+        </div>
+    </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
